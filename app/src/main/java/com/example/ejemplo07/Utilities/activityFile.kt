@@ -55,7 +55,7 @@ class activityFile : AppCompatActivity() {
                 mETAltura.text=jsonPokeInfo.getString("height")
                 mETExp.text=jsonPokeInfo.getString("base_experience")
 
-
+//sdad
             }
         }
     }
