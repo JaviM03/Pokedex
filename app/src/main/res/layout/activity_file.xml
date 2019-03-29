@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Utilities.activityFile"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="@dimen/small_font_size"
+        />
+    <TextView
+        android:id="@+id/profile_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_Font_Size"
+        />
+    <TextView
+        android:id="@+id/profile_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peso"
+        android:textSize="@dimen/small_font_size"
+        />
+    <TextView
+        android:id="@+id/profile_weight_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_Font_Size"
+        />
+    <TextView
+        android:id="@+id/profile_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Altura"
+        android:textSize="@dimen/small_font_size"
+        />
+    <TextView
+        android:id="@+id/profile_height_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_Font_Size"
+        />
+    <TextView
+        android:id="@+id/profile_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Experiencia Necesaria"
+        android:textSize="@dimen/small_font_size"
+        />
+    <TextView
+        android:id="@+id/profile_experience_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_Font_Size"
+        />
+</LinearLayout>

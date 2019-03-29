@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_gap">8dp</dimen>
+    <dimen name="medium_gap">16dp</dimen>
+    <dimen name="small_font_size">10dp</dimen>
+    <dimen name="Big_Font_Size">40dp</dimen>
+</resources>
