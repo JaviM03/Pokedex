@@ -36,9 +36,9 @@ class MainActivity : AppCompatActivity() {
         mETIdNombre= findViewById(R.id.et_pokemon_number)
         mButton= findViewById(R.id.bt_search_pokemon)
         mButton.setOnClickListener{
-            flagSearchTipo=true
-            Log.v("flag", "Si llego 1")
-            FetchPokemonTask().execute()
+
+
+
         }
         FetchPokemonTask().execute()
     }
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     private inner class FetchPokemonTask : AsyncTask<String, Void, String>() {
         override fun doInBackground(vararg params: String?): String {
-            //  var POKEMON_INFO="pokemon"
+
             val pokeAPI = elegirBusqueda()
 
             return try {

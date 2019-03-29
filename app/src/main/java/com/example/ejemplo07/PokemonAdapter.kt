@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.ejemplo07.Utilities.activityFile
 import com.example.ejemplo08.models.Pokemon
 
@@ -33,7 +34,7 @@ class PokemonAdapter(val items: List<Pokemon>, val context: Context) : RecyclerV
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
-        /*Glide.with(context).load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+items[position].idPokeApi+".png").into(holder.pokeFaceItem)*/
+        Glide.with(context).load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+items[position].idPokeApi+".png").into(holder.pokeIconItem)
 
     }
 
@@ -42,8 +43,9 @@ class PokemonAdapter(val items: List<Pokemon>, val context: Context) : RecyclerV
         private lateinit var nombPok: String
         private lateinit var urlPok: String
         private lateinit var idPokeApi: String
-        lateinit var pokeFaceItem: ImageView
-        lateinit var metInputPokemonId: EditText
+        lateinit var pokeIconItem: ImageView
+
+
 
         init{
             itemView.setOnClickListener{
@@ -62,6 +64,7 @@ class PokemonAdapter(val items: List<Pokemon>, val context: Context) : RecyclerV
 
 
             tv_pokemon_name.text = nombPok
+            pokeIconItem= pokeIcon
 
         }
 

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.ejemplo07.R
 import org.json.JSONObject
 import java.io.IOException
@@ -25,6 +26,7 @@ class activityFile : AppCompatActivity() {
         mETWeight= findViewById(R.id.profile_weight_tv)
         mETAltura= findViewById(R.id.profile_height_tv)
         mETExp= findViewById(R.id.profile_experience_tv)
+        mperfilmagenPokemon= findViewById(R.id.profile_Image)
 
 
         var intent: Intent = getIntent()
@@ -47,15 +49,16 @@ class activityFile : AppCompatActivity() {
 
             if (pokemonInfo != null || pokemonInfo != "") {
 
-                // Glide.with(this@ActivityPokemonFicha).load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+intent.getStringExtra("IDPokemon")+".png").into(mperfilmagenPokemon)
+                Glide.with(this@activityFile ).load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+intent.getStringExtra("IDPokemon")+".png").into(mperfilmagenPokemon)
 
                 var jsonPokeInfo= JSONObject(pokemonInfo)
                 mETNombre.text=jsonPokeInfo.getString("name")
                 mETWeight.text =jsonPokeInfo.getString("weight")
                 mETAltura.text=jsonPokeInfo.getString("height")
                 mETExp.text=jsonPokeInfo.getString("base_experience")
+                mperfilmagenPokemon= findViewById(R.id.profile_Image)
 
-//sdad
+
             }
         }
     }
